@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-import { ElMessage } from "element-plus";
+import { ElMessage, ElButton } from "element-plus";
 
 const show = () => {
   ElMessage.success("欢迎");
