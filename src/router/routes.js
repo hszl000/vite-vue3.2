@@ -1,8 +1,7 @@
-import Layout from '@/components/Layout/index.vue'
 import { defineAsyncComponent } from 'vue'
 
 // 
-import Login from '@/router/Login/index.js'
+import Login from '@/router/modules/Login/index.js'
 
 export default [
   Login,

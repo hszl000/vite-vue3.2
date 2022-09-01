@@ -9,6 +9,9 @@ const path = require('path')
 export default defineConfig({
   base:'/study',
   plugins: [vue(), ElementPlus()],
+  server: {
+    port: 5000,
+  },
   resolve: {
     alias: [
       {
@@ -45,4 +48,11 @@ export default defineConfig({
       // }
     ]
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: "@import './src/styles/element-variables.scss';"
+      }
+    }
+  }
 });
