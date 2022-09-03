@@ -1,13 +1,10 @@
-import Layout from '@/components/Layout/index.vue'
-import { defineAsyncComponent } from 'vue'
-
 export default {
   path: '/login',
   name: 'ProjectLoginLayout',
   meta: {
     title: '登录'
   },
-  component: defineAsyncComponent(() => Layout),
+  component: () => import('@/components/Layout/index.vue'),
   redirect: {
     name: 'ProjectLogin'
   },
@@ -18,9 +15,7 @@ export default {
       meta: {
         title: '登录'
       },
-      component: defineAsyncComponent(() => import('@/module/Login/index.vue'))
+      component: () => import('@/modules/Login/index.vue')
     }
   ]
-
-
 }
