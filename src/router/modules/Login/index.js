@@ -15,7 +15,7 @@ export default {
       meta: {
         title: '登录'
       },
-      component: () => import('@/modules/Login/index.vue')
+      component: () => import('@/modules/Login/pages/index.vue')
     }
   ]
 }
