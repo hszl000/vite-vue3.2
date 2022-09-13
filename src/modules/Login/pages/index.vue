@@ -10,7 +10,7 @@
       label-suffix=":"
       >
         <el-form-item :label="$t('login.userName')" prop="userName">
-          <el-input v-model="fromData.userName" :placeholder="`${$t('login.placeholder')}${$t('login.userName')}`" />
+          <el-input v-model="fromData.userName" :placeholder="`${$t('login.placeholder')}${$t('login.userName')}`" @input='handelInput'/>
         </el-form-item>
         <el-form-item :label="$t('login.passWord')" prop="passWord">
           <el-input v-model="fromData.passWord" :placeholder="`${$t('login.placeholder')}${$t('login.passWord')}`" show-password type="password" />
@@ -63,6 +63,14 @@ const loginSubmit = ()=>{
 // 重置
 const loginResert = ()=>{
   loginFrom.value.resetFields()
+}
+
+// 
+const handelInput = (val)=>{
+  if(fromData.value.userName.includes('，')){
+    fromData.value.userName = fromData.value.userName.replace(/，/g,',')
+    console.log(fromData.value.userName,'----',val)
+  }
 }
 </script>
 
