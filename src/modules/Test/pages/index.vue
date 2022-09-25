@@ -1,15 +1,19 @@
 <template>
-  <div>
-    <cardCom v-for='(item,index) in list' :key='index' :cardData='item' />
-  </div>
+  <el-row>
+    <el-col :span="6" v-for='(item,index) in list' :key='index'>
+      <cardCom  :cardData='item' />
+    </el-col>
+  </el-row>
 </template>
 
 <script>
 import card from '@/modules/Test/components/card/index.vue'
+import {ElRow,ElCol} from 'element-plus'
 export default {
   name:'Test',
   components:{
-    cardCom:card
+    cardCom:card,
+    ElRow,ElCol
   },
   data(){
     return {
@@ -34,6 +38,13 @@ export default {
         description:'审计发现问题',
         unit1:'2456',
         unit2:'12',
+      },
+      {
+        tag:"0",
+        title:'3333333',
+        description:'审计发现问题',
+        unit1:'2456',
+        unit2:'12',
       }
       ]
     }
@@ -41,6 +52,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang='scss' scoped>
+:deep(.el-col-6){
+  min-width: 250px;
+}
 
 </style>
