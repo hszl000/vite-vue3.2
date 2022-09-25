@@ -57,15 +57,13 @@ export default {
 
 <style lang='scss' scoped>
 .currentBox{
-  margin-top: 100px;
-  width: 316px;
-  // height: 159px;
+  margin: 10px;
   box-shadow: 0px 2px 10px 0px rgba(177,192,221,0.149);
   border-radius: 4px 4px 4px 4px;
   border: 1px solid #BFCAD7;
-    // position: relative;
 
     .tags{
+      width: 100%;
       margin-top: 17px;
       display: flex;
       border-bottom: 2px dashed #ccc;
@@ -73,14 +71,14 @@ export default {
         padding: 1px 8px;
         width: 36px;
         height: 23px;
-        // background:red;
         border-radius: 0px 15px 15px 0px;
         margin-right: 15px;
       }
 
       .name{
+        flex:1;
         .title{
-          max-width: 238px;
+          max-width: calc(100% - 20px);
           font-size: 16px;
           white-space: nowrap;
           overflow: hidden;
